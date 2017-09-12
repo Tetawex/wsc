@@ -3,7 +3,7 @@ package org.tetawex.wsc;
 import com.badlogic.gdx.backends.iosmoe.IOSApplication;
 import com.badlogic.gdx.backends.iosmoe.IOSApplicationConfiguration;
 import org.moe.natj.general.Pointer;
-import org.tetawex.wsc.WSCGame;
+import org.tetawex.wsc.game.core.WSCGame;
 
 import apple.uikit.c.UIKit;
 
