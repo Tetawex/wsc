@@ -22,10 +22,12 @@ public class WSCGame extends BaseGame<AssetProviderImpl> {
     @Override
     public void render() {
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+        getGameStateManager().getCurrentScreen().render(Gdx.graphics.getDeltaTime());
     }
 
     @Override
     public void dispose() {
+        getGameStateManager().getCurrentScreen().dispose();
         getAssetProvider().dispose();
     }
 }

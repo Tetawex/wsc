@@ -32,7 +32,10 @@ public class AssetProviderImpl extends BaseAssetProvider {
     public void setupLoad() {
         getAssetManager().load("atlas.atlas", TextureAtlas.class);
         getAssetManager().load("backgrounds/background.png", Texture.class);
-        getAssetManager().load("i18n/bundle", I18NBundle.class);
+    }
+    @Override
+    public void preLoad(){
+        super.preLoad();
         loadFonts();
     }
 

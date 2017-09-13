@@ -47,6 +47,10 @@ public abstract class BaseAssetProvider {
 
     public abstract void setupLoad();
 
+    public void preLoad(){
+        setupLocalisation();
+    }
+
     public void startLoading() {
         setupLocalisation();
         finishedLoading = false;

@@ -16,8 +16,9 @@ import org.tetawex.wsc.game.util.StyleFactory;
  * Created by tetawex on 09.09.17.
  */
 public class LoadingScreen extends BaseScreen<WSCGame> {
-    BaseAssetProvider.LoaderListener loaderListener;
-    AssetProviderImpl assetProvider;
+    private BaseAssetProvider.LoaderListener loaderListener;
+    private AssetProviderImpl assetProvider;
+    private ProgressBar progressBar;
 
     public LoadingScreen(WSCGame game) {
         super(game);
@@ -26,6 +27,7 @@ public class LoadingScreen extends BaseScreen<WSCGame> {
 
     @Override
     public void show() {
+        assetProvider.preLoad();
         assetProvider.startLoading();
         getStage().addActor(new Actor() {
             @Override
@@ -41,8 +43,10 @@ public class LoadingScreen extends BaseScreen<WSCGame> {
                 .getTexture("backgrounds/background.png"));
         background.setFillParent(true);
         Table table = new Table();
-        table.add(new ProgressBar(0f, 1f, 0.001f, false,
-                StyleFactory.generateLoadingMenuProgressBarStyle(assetProvider)))
+
+        progressBar = new ProgressBar(0f, 1f, 0.001f, false,
+                StyleFactory.generateLoadingMenuProgressBarStyle(assetProvider));
+        table.add(progressBar)
         .growX().pad(40f);
         loaderListener = new BaseAssetProvider.LoaderListener() {
             @Override
