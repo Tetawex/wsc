@@ -10,7 +10,7 @@ import java.util.Map;
  * Created by tetawex on 09.09.17.
  */
 public class LocaleProviderImpl implements LocaleProvider {
-    Map<String, Locale> localeMap;
+    private Map<String, Locale> localeMap;
 
     public LocaleProviderImpl() {
         localeMap = new HashMap<String, Locale>();

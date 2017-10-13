@@ -7,7 +7,6 @@ import java.util.Map;
  * Created by tetawex on 28.01.17.
  */
 public class Bundle {
-    public static ImmutableBundle EMPTY = ImmutableBundle.create();
 
     public static Bundle fromSingleValue(String key, Bundle value) {
         Bundle bundle = new Bundle();

@@ -4,8 +4,12 @@ package org.tetawex.wsc.base.util;
  * Created by tetawex on 04.09.17.
  */
 public class ImmutableBundle extends Bundle {
-    protected static ImmutableBundle create() {
-        return new ImmutableBundle();
+    private static ImmutableBundle bundle;
+
+    public static ImmutableBundle get() {
+        if (bundle == null)
+            bundle = new ImmutableBundle();
+        return bundle;
     }
 
     private ImmutableBundle() {

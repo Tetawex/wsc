@@ -1,0 +1,22 @@
+
+pl_atlas.png
+size: 256,128
+format: RGBA8888
+filter: Nearest,MipMapLinearNearest
+repeat: none
+pb_bg
+  rotate: false
+  xy: 2, 2
+  size: 79, 100
+  split: 38, 38, 0, 0
+  orig: 79, 100
+  offset: 0, 0
+  index: -1
+pb_fill
+  rotate: false
+  xy: 83, 2
+  size: 79, 100
+  split: 38, 38, 0, 0
+  orig: 79, 100
+  offset: 0, 0
+  index: -1

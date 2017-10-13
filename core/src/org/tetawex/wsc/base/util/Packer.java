@@ -8,5 +8,6 @@ public class Packer {
         TexturePacker.Settings settings = new TexturePacker.Settings();
         settings.filterMag = Texture.TextureFilter.MipMapLinearNearest;
         TexturePacker.process(settings, "assets/textures", "assets", "atlas");
+        TexturePacker.process(settings, "assets/pl_textures", "assets", "pl_atlas");
     }
 }

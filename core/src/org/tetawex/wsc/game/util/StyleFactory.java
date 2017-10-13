@@ -29,10 +29,11 @@ public class StyleFactory {
     }
 
     public static ProgressBar.ProgressBarStyle generateLoadingMenuProgressBarStyle(AssetProviderImpl assetProvider) {
-        Skin skin = getSkin(assetProvider);
+        Skin skin = new Skin();
+        skin.addRegions(assetProvider.getPreTextureAtlas());
         ProgressBar.ProgressBarStyle style = new ProgressBar.ProgressBarStyle();
-        style.background = skin.getDrawable("progressbar_background");
-        style.disabledBackground = skin.getDrawable("progressbar_background_disabled");
+        style.knobBefore = new NinePatchDrawable(skin.getPatch("pb_fill"));
+        style.background = new NinePatchDrawable(skin.getPatch("pb_bg"));
         return style;
     }
 

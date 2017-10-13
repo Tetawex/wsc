@@ -1,0 +1,13 @@
+
+atlas.png
+size: 256,512
+format: RGBA8888
+filter: Nearest,MipMapLinearNearest
+repeat: none
+dummy
+  rotate: false
+  xy: 2, 2
+  size: 229, 281
+  orig: 229, 281
+  offset: 0, 0
+  index: -1
