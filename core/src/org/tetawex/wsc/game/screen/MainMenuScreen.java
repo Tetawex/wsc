@@ -16,8 +16,6 @@ import org.tetawex.wsc.game.util.StyleFactory;
  * Created by tetawex on 09.09.17.
  */
 public class MainMenuScreen extends BaseWSCScreen {
-    private BaseAssetProvider.LoaderListener loaderListener;
-    private ProgressBar progressBar;
 
     public MainMenuScreen(WSCGame game) {
         super(game);
@@ -25,12 +23,16 @@ public class MainMenuScreen extends BaseWSCScreen {
 
     @Override
     public void show() {
+        super.show();
     }
 
     @Override
     public void initUi() {
         final Image background = new Image(getGame().getAssetProvider()
                 .getTexture("backgrounds/background.png"));
+        background.setWidth(3840);
+        background.setHeight(2160);
+        background.setPosition(0,0);
         getStage().addActor(background);
     }
 

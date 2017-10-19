@@ -48,9 +48,6 @@ public class AssetProviderImpl extends BaseAssetProvider {
     public void setupLoad() {
         getAssetManager().load("atlas.atlas", TextureAtlas.class);
         getAssetManager().load("backgrounds/background.png", Texture.class);
-        getAssetManager().load("backgrounds/test.png", Texture.class);
-        getAssetManager().load("backgrounds/te22st.png", Texture.class);
-        getAssetManager().load("backgrounds/test2.png", Texture.class);
     }
 
     @Override

@@ -58,14 +58,14 @@ public class LoadingScreen extends BaseWSCScreen {
 
         progressBar = new ProgressBar(0f, 1f, 0.01f, false,
                 StyleFactory.generateLoadingMenuProgressBarStyle(assetProvider));
-        progressBar.setVisualInterpolation(new Interpolation.Swing(1));
+        progressBar.setVisualInterpolation(new Interpolation.Pow(8));
+        progressBar.setAnimateDuration(0.5f);
         table.add(progressBar).height(120f).bottom()
                 .growX().pad(50f);
 
         assetProvider.setLoaderListener(new BaseAssetProvider.LoaderListener() {
             @Override
             public void progressChanged(float newProgress) {
-                Gdx.app.log("pb", "" + newProgress);
                 progressBar.setValue(newProgress);
             }
 
